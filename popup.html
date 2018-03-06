@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/icon.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<form id="form">
+    <fieldset id="myfieldset">
+        <legend>実行手順の作成</legend>
+
+        <div class="uploadButton">
+            投票済みデータを初期化
+            <input type="button" id="file_input" name="fileinput"/>
+        </div>
+
+        <!--説明枠-->
+        <input type="text" name="once_speed_comment" id="once_speed_comment" disabled="disabled" value="実行の速さ、1000が１秒">
+        <input type="text" name="once_start_num_comment" id="once_start_num_comment" disabled="disabled" value="どの番号からスタートする">
+
+        <!--実行の速さ、1000が１秒-->
+        <input type="text" name="once_speed" id="once_speed" value="2500">
+
+        <!--どこからスタート-->
+        <input type="text" name="once_start_num" id="once_start_num" value="0">
+
+        <!--全部の個数ー表示だけ-->
+        <input type="text" name="total_num" id="total_num" disabled="disabled" value="総データの数：">
+
+        <!--現在の位置ー表示だけ-->
+        <input type="text" name="now_num" id="now_num" disabled="disabled" value="完了したデータ数：">
+
+        <!--現在の状況確認ー説明枠-->
+        <input type="text" name="default_situation_comment" id="default_situation_comment" disabled="disabled" value="詳細の状況確認">
+
+        <!--現在の状況確認-->
+        <input type="text" name="default_situation" id="default_situation"　disabled="disabled" value="nil">
+
+        <!--指令のJSONー説明枠-->
+        <input type="text" name="default_code_comment" id="default_code_comment" disabled="disabled" value="config.js(指令)の内容の入力">
+
+        <!--指令のJSON入力-->
+        <input type="text" name="default_code" id="default_code">
+
+        <!--Data_Pillor.txtの内容ー説明枠-->
+        <input type="text" name="default_passw_comment" id="default_passw_comment" disabled="disabled" value="Data_Pillor.txt（アカウント情報）の内容の入力">
+
+        <!--Data_Pillor.txtの内容の入力-->
+        <input type="text" name="default_passw" id="default_passw">
+
+        <!--状態のメッセージの表示-->
+        <input type="text" name="default_value" disabled="disabled" id="default_value" value="init.">
+
+        <!--初期ページのリンク-->
+        <input type="text" name="default-url" id="default_url" value="https://member.akb48.co.jp/login.php" />
+
+        <!--指令のレイヤー-->
+        <div class="container" id="container_box">
+
+        </div>
+        <!--ボタンの設置-->
+        <button id="addproc"><span class="icon-plus">プロセス追加</span></button>
+        <button id="endproc"><span class="icon-cancel-circle">プロセス停止</span></button>
+        <button id="testproc"><span>プロセステスト</span></button>
+
+    </fieldset>
+</form>
+
+<button id="check"><span>開始</span></button>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cryptico.min.js"></script>
+</body>
+</html>
